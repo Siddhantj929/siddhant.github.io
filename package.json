@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-siddhant",
+  "version": "1.0.0",
+  "description": "A portfolio website for Siddhant Jain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siddhantj929/siddhant.github.io.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Siddhant",
+    "Jain"
+  ],
+  "author": "Siddhant Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Siddhantj929/siddhant.github.io/issues"
+  },
+  "homepage": "https://github.com/Siddhantj929/siddhant.github.io#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
