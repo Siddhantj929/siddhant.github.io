@@ -1,0 +1,9 @@
+.delay {
+	&-1s {
+		animation-delay: 1s;
+	}
+
+	&-half {
+		animation-delay: 0.5s;
+	}
+}

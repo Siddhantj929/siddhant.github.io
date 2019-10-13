@@ -1,0 +1,22 @@
+// Colors
+$primary: #219653;
+$primary-dark: darken($primary, 20%);
+$primary-light: lighten($primary, 20%);
+
+// Backgrounds
+$alpha: 0.77;
+
+// Texts
+$heading-color: #000;
+$text-color: lighten($heading-color, 20%);
+$primary-text-color: #fff;
+
+$line-height: 1.2;
+$default-text-size: 16px;
+
+// Spacing and orders
+$spacing-unit: 8px;
+$border-radius: 4px;
+
+// Animations
+$transition-default: all 120ms linear;
