@@ -1,13 +1,15 @@
 #hero {
 	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
 	position: relative;
 
 	&-background {
 		position: absolute;
-		top: 0;
 		bottom: 0;
 		right: 0;
-		height: 100%;
+		left: 0;
+		height: 90%;
 	}
 
 	&-overlay {
@@ -55,11 +57,11 @@
 		}
 
 		h1.hero-background-text {
-			color: rgba($primary, 0.4);
-			font-size: 12rem;
+			color: rgba($primary-light, 0.3);
+			font-size: 17vw;
 			font-weight: bold;
 			position: absolute;
-			top: 32%;
+			top: 48%;
 			left: 8%;
 			-webkit-touch-callout: none; /* iOS Safari */
 			-webkit-user-select: none; /* Safari */
@@ -77,18 +79,65 @@
 
 		h3 {
 			&.hero-text {
-				font-size: 2rem;
-				top: 42%;
-				left: 17%;
+				font-size: 1.8rem;
+				top: 54%;
+				left: 10%;
 			}
 		}
 
 		h2 {
 			&.hero-text {
-				font-size: 3rem;
-				top: 50%;
-				left: 17%;
-				width: 50%;
+				font-size: 2.35rem;
+				top: 62%;
+				left: 10%;
+				width: 85%;
+			}
+		}
+	}
+}
+
+@include styles-above-size(md) {
+	#hero {
+		&-background {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: initial;
+			height: 100%;
+		}
+
+		&-overlay {
+			h1.hero-background-text {
+				color: rgba($primary, 0.4);
+				font-size: 12rem;
+				font-weight: bold;
+				position: absolute;
+				top: 32%;
+				left: 8%;
+				-webkit-touch-callout: none; /* iOS Safari */
+				-webkit-user-select: none; /* Safari */
+				-khtml-user-select: none; /* Konqueror HTML */
+				-moz-user-select: none; /* Old versions of Firefox */
+				-ms-user-select: none; /* Internet Explorer/Edge */
+				user-select: none;
+			}
+
+			h3 {
+				&.hero-text {
+					font-size: 2rem;
+					top: 42%;
+					left: 17%;
+				}
+			}
+
+			h2 {
+				&.hero-text {
+					font-size: 3rem;
+					top: 50%;
+					left: 17%;
+					width: 50%;
+				}
 			}
 		}
 	}

@@ -1,0 +1,47 @@
+.notification {
+	position: fixed;
+	bottom: $spacing-unit * 2;
+	right: $spacing-unit * 2;
+	z-index: 9;
+	// border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	i {
+		font-size: 2rem;
+		color: white;
+		opacity: 0;
+		transition: $transition-default;
+
+		&.not-filled {
+			background: white;
+			border-radius: 50%;
+			padding: $spacing-unit / 4;
+			font-size: 1.6rem;
+			color: $primary;
+		}
+	}
+
+	span {
+		background: black;
+		color: white;
+		margin-right: $spacing-unit;
+		font-size: 1.2rem;
+		padding: $spacing-unit * 1.2 $spacing-unit * 2;
+		transform-origin: right center;
+		transform: scaleX(0);
+		transition: $transition-default;
+		transition-delay: 90ms;
+	}
+
+	&.is-active {
+		i {
+			opacity: 1;
+		}
+
+		span {
+			transform: scaleX(1);
+		}
+	}
+}
