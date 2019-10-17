@@ -47,6 +47,11 @@
 						img {
 							margin-left: $spacing-unit * 2;
 						}
+
+						img[alt="Close"] {
+							padding: $spacing-unit;
+							display: none;
+						}
 					}
 
 					img {
@@ -91,6 +96,30 @@
 				top: 62%;
 				left: 10%;
 				width: 85%;
+			}
+		}
+	}
+}
+
+main.menu-is-active {
+	#hero {
+		&-overlay {
+			header {
+				.container {
+					a {
+						&.menu-header {
+							color: transparent;
+
+							img[alt="Menu"] {
+								display: none;
+							}
+
+							img[alt="Close"] {
+								display: block;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

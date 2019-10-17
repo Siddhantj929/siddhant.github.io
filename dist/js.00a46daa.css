@@ -427,6 +427,10 @@ table {
   width: 90%;
 }
 
+body {
+  background: #219653;
+}
+
 html,
 body {
   font-family: "Montserrat", sans-serif;
@@ -488,18 +492,18 @@ a {
   transition: all 120ms linear;
 }
 .notification i.not-filled {
-  background: white;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  padding: 2px;
+  padding: 8px;
   font-size: 1.6rem;
-  color: #219653;
+  color: white;
 }
 .notification span {
   background: black;
   color: white;
-  margin-right: 8px;
+  margin-right: 16px;
   font-size: 1.2rem;
-  padding: 9.6px 16px;
+  padding: 12px 24px;
   transform-origin: right center;
   transform: scaleX(0);
   transition: all 120ms linear;
@@ -512,6 +516,81 @@ a {
   transform: scaleX(1);
 }
 
+main {
+  background: white;
+  transition: all 220ms linear;
+}
+main.menu-is-active {
+  transform: scale(0.97) translateX(-82vw);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 4px 0px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 992px) {
+  main.menu-is-active {
+    transform: scale(0.97) translateX(-30vw);
+  }
+}
+aside {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 82vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+}
+aside .main-menu {
+  text-align: center;
+}
+aside .main-menu li {
+  padding: 16px 40px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 120ms linear;
+}
+aside .main-menu li a {
+  font-size: 1.8em;
+  color: #fff;
+}
+aside .main-menu li:last-child {
+  margin-bottom: 0;
+}
+aside .main-menu li.is-active, aside .main-menu li:focus, aside .main-menu li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+aside .main-menu li:nth-child(1) {
+  transition-delay: 0ms;
+}
+aside .main-menu li:nth-child(2) {
+  transition-delay: 120ms;
+}
+aside .main-menu li:nth-child(3) {
+  transition-delay: 240ms;
+}
+aside .main-menu li:nth-child(4) {
+  transition-delay: 360ms;
+}
+aside .main-menu li:nth-child(5) {
+  transition-delay: 480ms;
+}
+aside.menu-is-active li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 992px) {
+  aside {
+    width: 30vw;
+  }
+}
 #hero {
   height: 100vh;
   width: 100vw;
@@ -558,6 +637,10 @@ a {
 #hero-overlay header .container a.menu-header img {
   margin-left: 16px;
 }
+#hero-overlay header .container a.menu-header img[alt=Close] {
+  padding: 8px;
+  display: none;
+}
 #hero-overlay header .container a img {
   height: 100%;
 }
@@ -595,6 +678,16 @@ a {
   top: 62%;
   left: 10%;
   width: 85%;
+}
+
+main.menu-is-active #hero-overlay header .container a.menu-header {
+  color: transparent;
+}
+main.menu-is-active #hero-overlay header .container a.menu-header img[alt=Menu] {
+  display: none;
+}
+main.menu-is-active #hero-overlay header .container a.menu-header img[alt=Close] {
+  display: block;
 }
 
 @media (min-width: 992px) {

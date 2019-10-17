@@ -4,3 +4,4 @@ import "animate.css/animate.min.css";
 import "../styles/main.scss";
 
 import "./timeAnimations";
+import "./menu";

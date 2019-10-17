@@ -15,20 +15,20 @@
 		transition: $transition-default;
 
 		&.not-filled {
-			background: white;
+			background: rgba(white, 0.2);
 			border-radius: 50%;
-			padding: $spacing-unit / 4;
+			padding: $spacing-unit;
 			font-size: 1.6rem;
-			color: $primary;
+			color: white;
 		}
 	}
 
 	span {
 		background: black;
 		color: white;
-		margin-right: $spacing-unit;
+		margin-right: $spacing-unit * 2;
 		font-size: 1.2rem;
-		padding: $spacing-unit * 1.2 $spacing-unit * 2;
+		padding: $spacing-unit * 1.5 $spacing-unit * 3;
 		transform-origin: right center;
 		transform: scaleX(0);
 		transition: $transition-default;
