@@ -18,10 +18,14 @@
 		bottom: 0;
 		right: 0;
 		left: 0;
-		background-color: rgba($primary, $alpha);
+		background: linear-gradient(
+			-125deg,
+			$secondary-with-alpha,
+			$primary-with-alpha
+		);
 
 		header {
-			height: $spacing-unit * 12;
+			height: $header-menu-height;
 
 			.container {
 				display: flex;
@@ -61,41 +65,45 @@
 			}
 		}
 
-		h1.hero-background-text {
-			color: rgba($primary-light, 0.3);
-			font-size: 17vw;
-			font-weight: bold;
-			position: absolute;
-			top: 48%;
-			left: 8%;
-			-webkit-touch-callout: none; /* iOS Safari */
-			-webkit-user-select: none; /* Safari */
-			-khtml-user-select: none; /* Konqueror HTML */
-			-moz-user-select: none; /* Old versions of Firefox */
-			-ms-user-select: none; /* Internet Explorer/Edge */
-			user-select: none;
-		}
+		.content {
+			position: relative;
 
-		.hero-text {
-			color: $primary-text-color;
-			font-weight: bold;
-			position: absolute;
-		}
-
-		h3 {
-			&.hero-text {
-				font-size: 1.8rem;
-				top: 54%;
-				left: 10%;
+			h1.hero-background-text {
+				color: rgba($primary, 0.3);
+				font-size: 17vw;
+				font-weight: bold;
+				// position: absolute;
+				// top: 48%;
+				// left: 8%;
+				-webkit-touch-callout: none; /* iOS Safari */
+				-webkit-user-select: none; /* Safari */
+				-khtml-user-select: none; /* Konqueror HTML */
+				-moz-user-select: none; /* Old versions of Firefox */
+				-ms-user-select: none; /* Internet Explorer/Edge */
+				user-select: none;
 			}
-		}
 
-		h2 {
-			&.hero-text {
-				font-size: 2.35rem;
-				top: 62%;
-				left: 10%;
-				width: 85%;
+			.hero-text {
+				color: $primary-text-color;
+				font-weight: bold;
+				// position: absolute;
+			}
+
+			h3 {
+				&.hero-text {
+					font-size: 1.8rem;
+					// top: 54%;
+					// left: 10%;
+				}
+			}
+
+			h2 {
+				&.hero-text {
+					font-size: 2.35rem;
+					// top: 62%;
+					// left: 10%;
+					// width: 85%;
+				}
 			}
 		}
 	}
@@ -129,43 +137,70 @@ main.menu-is-active {
 	#hero {
 		&-background {
 			position: absolute;
-			top: 0;
+			top: 5%;
 			bottom: 0;
-			right: 0;
+			right: -5%;
 			left: initial;
-			height: 100%;
+			height: 110%;
 		}
 
 		&-overlay {
-			h1.hero-background-text {
-				color: rgba($primary, 0.4);
-				font-size: 12rem;
-				font-weight: bold;
-				position: absolute;
-				top: 32%;
-				left: 8%;
-				-webkit-touch-callout: none; /* iOS Safari */
-				-webkit-user-select: none; /* Safari */
-				-khtml-user-select: none; /* Konqueror HTML */
-				-moz-user-select: none; /* Old versions of Firefox */
-				-ms-user-select: none; /* Internet Explorer/Edge */
-				user-select: none;
-			}
+			.content {
+				height: 100%;
+				display: flex;
+				align-items: center;
 
-			h3 {
-				&.hero-text {
-					font-size: 2rem;
-					top: 42%;
-					left: 17%;
-				}
-			}
+				.container {
+					position: relative;
+					margin-top: -$header-menu-height - 2 * $spacing-unit;
 
-			h2 {
-				&.hero-text {
-					font-size: 3rem;
-					top: 50%;
-					left: 17%;
-					width: 50%;
+					h1.hero-background-text {
+						color: rgba(white, 0.06);
+						font-size: 11vw;
+						font-weight: bold;
+						position: absolute;
+						top: -14%;
+						// left: 8%;
+						-webkit-touch-callout: none; /* iOS Safari */
+						-webkit-user-select: none; /* Safari */
+						-khtml-user-select: none; /* Konqueror HTML */
+						-moz-user-select: none; /* Old versions of Firefox */
+						-ms-user-select: none; /* Internet Explorer/Edge */
+						user-select: none;
+					}
+
+					.hero-text {
+						color: $primary-text-color;
+						font-weight: bold;
+						// position: absolute;
+					}
+
+					h3 {
+						&.hero-text {
+							font-size: 2rem;
+							// top: 54%;
+							// left: 10%;
+						}
+					}
+
+					h2 {
+						&.hero-text {
+							font-size: 3rem;
+							font-weight: 400;
+							margin-top: 4 * $spacing-unit;
+							// top: 62%;
+							// left: 10%;
+							width: 70%;
+						}
+					}
+
+					.buttons {
+						margin-top: 10 * $spacing-unit;
+
+						a {
+							margin-right: 1.5 * $spacing-unit;
+						}
+					}
 				}
 			}
 		}

@@ -416,6 +416,9 @@ table {
 .delay-half {
   animation-delay: 0.5s;
 }
+.delay-1-half {
+  animation-delay: 1.5s;
+}
 
 * {
   box-sizing: border-box !important;
@@ -428,9 +431,14 @@ table {
 }
 
 body {
-  background: #219653;
+  background: white;
 }
 
+@media (min-width: 992px) {
+  .container {
+    width: 80%;
+  }
+}
 html,
 body {
   font-family: "Montserrat", sans-serif;
@@ -476,44 +484,49 @@ a {
   text-decoration: none;
 }
 
-.notification {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  z-index: 9;
+.btn-secondary {
+  border: 1px solid white;
+  padding: 12px 32px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  position: relative;
+  color: white;
+  font-weight: 600;
+}
+.btn-primary {
+  background: white;
+  padding: 12px 32px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  position: relative;
+  color: black;
+  font-weight: 600;
+}
+.btn-with-icon {
+  padding-right: 56px;
+}
+.btn-with-icon .icon {
+  position: absolute;
+  right: 8px;
+  padding: 8px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.notification i {
-  font-size: 2rem;
+.btn-with-icon.btn-primary .icon {
   color: white;
-  opacity: 0;
-  transition: all 120ms linear;
-}
-.notification i.not-filled {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  padding: 8px;
-  font-size: 1.6rem;
-  color: white;
-}
-.notification span {
   background: black;
-  color: white;
-  margin-right: 16px;
-  font-size: 1.2rem;
-  padding: 12px 24px;
-  transform-origin: right center;
-  transform: scaleX(0);
-  transition: all 120ms linear;
-  transition-delay: 90ms;
-}
-.notification.is-active i {
-  opacity: 1;
-}
-.notification.is-active span {
-  transform: scaleX(1);
 }
 
 main {
@@ -610,7 +623,7 @@ aside.menu-is-active li {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(33, 150, 83, 0.77);
+  background: linear-gradient(-125deg, rgba(33, 150, 83, 0.77), rgba(32, 118, 108, 0.77));
 }
 #hero-overlay header {
   height: 96px;
@@ -644,13 +657,13 @@ aside.menu-is-active li {
 #hero-overlay header .container a img {
   height: 100%;
 }
-#hero-overlay h1.hero-background-text {
-  color: rgba(71, 214, 132, 0.3);
+#hero-overlay .content {
+  position: relative;
+}
+#hero-overlay .content h1.hero-background-text {
+  color: rgba(122, 193, 153, 0.3);
   font-size: 17vw;
   font-weight: bold;
-  position: absolute;
-  top: 48%;
-  left: 8%;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -663,21 +676,15 @@ aside.menu-is-active li {
   /* Internet Explorer/Edge */
   user-select: none;
 }
-#hero-overlay .hero-text {
+#hero-overlay .content .hero-text {
   color: #fff;
   font-weight: bold;
-  position: absolute;
 }
-#hero-overlay h3.hero-text {
+#hero-overlay .content h3.hero-text {
   font-size: 1.8rem;
-  top: 54%;
-  left: 10%;
 }
-#hero-overlay h2.hero-text {
+#hero-overlay .content h2.hero-text {
   font-size: 2.35rem;
-  top: 62%;
-  left: 10%;
-  width: 85%;
 }
 
 main.menu-is-active #hero-overlay header .container a.menu-header {
@@ -693,19 +700,27 @@ main.menu-is-active #hero-overlay header .container a.menu-header img[alt=Close]
 @media (min-width: 992px) {
   #hero-background {
     position: absolute;
-    top: 0;
+    top: 5%;
     bottom: 0;
-    right: 0;
+    right: -5%;
     left: initial;
-    height: 100%;
+    height: 110%;
   }
-  #hero-overlay h1.hero-background-text {
-    color: rgba(33, 150, 83, 0.4);
-    font-size: 12rem;
+  #hero-overlay .content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  #hero-overlay .content .container {
+    position: relative;
+    margin-top: -112px;
+  }
+  #hero-overlay .content .container h1.hero-background-text {
+    color: rgba(255, 255, 255, 0.06);
+    font-size: 11vw;
     font-weight: bold;
     position: absolute;
-    top: 32%;
-    left: 8%;
+    top: -14%;
     -webkit-touch-callout: none;
     /* iOS Safari */
     -webkit-user-select: none;
@@ -718,16 +733,24 @@ main.menu-is-active #hero-overlay header .container a.menu-header img[alt=Close]
     /* Internet Explorer/Edge */
     user-select: none;
   }
-  #hero-overlay h3.hero-text {
-    font-size: 2rem;
-    top: 42%;
-    left: 17%;
+  #hero-overlay .content .container .hero-text {
+    color: #fff;
+    font-weight: bold;
   }
-  #hero-overlay h2.hero-text {
+  #hero-overlay .content .container h3.hero-text {
+    font-size: 2rem;
+  }
+  #hero-overlay .content .container h2.hero-text {
     font-size: 3rem;
-    top: 50%;
-    left: 17%;
-    width: 50%;
+    font-weight: 400;
+    margin-top: 32px;
+    width: 70%;
+  }
+  #hero-overlay .content .container .buttons {
+    margin-top: 80px;
+  }
+  #hero-overlay .content .container .buttons a {
+    margin-right: 12px;
   }
 }
 

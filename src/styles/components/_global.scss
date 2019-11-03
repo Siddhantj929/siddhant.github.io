@@ -9,5 +9,11 @@
 }
 
 body {
-	background: $primary;
+	background: white;
+}
+
+@include styles-above-size(md) {
+	.container {
+		width: 80%;
+	}
 }

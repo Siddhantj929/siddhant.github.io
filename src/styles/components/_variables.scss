@@ -1,7 +1,8 @@
 // Colors
-$primary: #219653;
-$primary-dark: darken($primary, 20%);
-$primary-light: lighten($primary, 20%);
+$primary: #7ac199;
+$secondary: #7baea7;
+$primary-with-alpha: rgba(#20766c, 0.77);
+$secondary-with-alpha: rgba(#219653, 0.77);
 
 // Backgrounds
 $alpha: 0.77;
@@ -32,3 +33,4 @@ $breakpoints: (
 // Menu
 $menu-size-desktop: 30vw;
 $menu-size: 82vw;
+$header-menu-height: $spacing-unit * 12;

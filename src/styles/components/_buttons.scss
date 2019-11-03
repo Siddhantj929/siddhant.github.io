@@ -1,0 +1,52 @@
+.btn {
+	&-secondary {
+		border: 1px solid white;
+		padding: 1.5 * $spacing-unit 4 * $spacing-unit;
+		text-align: center;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 200px;
+		position: relative;
+		color: white;
+		font-weight: 600;
+	}
+
+	&-primary {
+		background: white;
+		padding: 1.5 * $spacing-unit 4 * $spacing-unit;
+		text-align: center;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 200px;
+		position: relative;
+		color: black;
+		font-weight: 600;
+	}
+
+	&-with-icon {
+		padding-right: 7 * $spacing-unit;
+
+		.icon {
+			position: absolute;
+			right: $spacing-unit;
+			padding: $spacing-unit;
+			background: white;
+			color: black;
+			border-radius: 50%;
+			width: 3.5 * $spacing-unit;
+			height: 3.5 * $spacing-unit;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&.btn-primary {
+			.icon {
+				color: white;
+				background: black;
+			}
+		}
+	}
+}
