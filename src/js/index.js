@@ -1,6 +1,4 @@
-import "typeface-montserrat";
+// Importing styles
 
-import "material-icons/iconfont/material-icons.scss";
-
-import "animate.css/animate.min.css";
+// import "animate.css";
 import "../styles/main.scss";

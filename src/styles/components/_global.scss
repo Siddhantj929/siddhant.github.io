@@ -1,19 +1,25 @@
 * {
-	box-sizing: border-box !important;
-}
-
-.container {
-	display: block;
-	margin: 0 auto;
-	width: 90%;
+  box-sizing: border-box !important;
 }
 
 body {
-	background: white;
+  background: white;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 @include styles-above-size(md) {
-	.container {
-		width: 80%;
-	}
+  .container {
+    width: 80%;
+  }
 }

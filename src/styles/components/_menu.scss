@@ -1,0 +1,42 @@
+header {
+  padding: 4 * $units 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  z-index: 999;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 3 * $units;
+    }
+
+    nav {
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        li {
+          margin: 0 2.5 * $units;
+
+          a {
+            color: rgba(white, 0.8);
+            transition: all 180ms linear;
+
+            &:hover,
+            &:active,
+            &.active {
+              color: rgba(white, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

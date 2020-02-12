@@ -1,0 +1,44 @@
+%btn {
+  border: 1.2px solid #d2d2d2;
+  border-radius: $border-radius;
+  padding: $units 2 * $units;
+  color: black;
+}
+
+%btn-raised {
+  border-radius: $border-radius;
+  padding: 1.5 * $units 2.5 * $units;
+  color: white;
+  background: linear-gradient(to right, $secondary, $primary);
+  box-shadow: 0 4px 24px rgba(black, 0.15);
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn {
+  @extend %btn;
+
+  &-light {
+    @extend %btn;
+    border-color: rgba(white, 0.8);
+    color: rgba(white, 0.8);
+    transition: all 180ms linear;
+
+    &:hover,
+    &:active {
+      color: rgba(white, 1);
+    }
+  }
+
+  &-raised {
+    @extend %btn-raised;
+
+    &-light {
+      @extend %btn-raised;
+      color: black;
+      background: white;
+      box-shadow: 0 12px 45px rgba(black, 0.28);
+      padding: 2 * $units 3.5 * $units;
+    }
+  }
+}

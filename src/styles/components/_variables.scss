@@ -1,8 +1,6 @@
 // Colors
-$primary: #7ac199;
-$secondary: #7baea7;
-$primary-with-alpha: rgba(#20766c, 0.77);
-$secondary-with-alpha: rgba(#219653, 0.77);
+$primary: #18896e;
+$secondary: #0c5c6e;
 
 // Backgrounds
 $alpha: 0.77;
@@ -16,7 +14,7 @@ $line-height: 1.2;
 $default-text-size: 16px;
 
 // Spacing and orders
-$spacing-unit: 8px;
+$units: 8px;
 $border-radius: 4px;
 
 // Animations
@@ -24,13 +22,12 @@ $transition-default: all 120ms linear;
 
 // Responsive
 $breakpoints: (
-	xs: 576px,
-	sm: 768px,
-	md: 992px,
-	lg: 1200px
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
 );
 
 // Menu
 $menu-size-desktop: 30vw;
 $menu-size: 82vw;
-$header-menu-height: $spacing-unit * 12;
