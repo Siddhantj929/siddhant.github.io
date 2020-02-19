@@ -13,7 +13,7 @@ header {
     align-items: center;
 
     h2 {
-      font-size: 3 * $units;
+      font-size: 1.4rem;
     }
 
     nav {
@@ -28,6 +28,7 @@ header {
           a {
             color: rgba(white, 0.8);
             transition: all 180ms linear;
+            font-weight: bold;
 
             &:hover,
             &:active,

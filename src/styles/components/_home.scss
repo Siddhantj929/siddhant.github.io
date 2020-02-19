@@ -39,18 +39,18 @@
   }
 
   h1 {
-    font-size: 8 * $units;
-    margin: 2 * $units 0 3 * $units 0;
+    font-size: 3.7rem;
+    margin: 2 * $units 0 4 * $units 0;
   }
 
   p.body-text {
-    color: rgba($color: white, $alpha: 0.8);
+    color: rgba($color: white, $alpha: 0.9);
     margin: 2 * $units 0;
     width: 60%;
   }
 
   .cta {
-    margin-top: 6 * $units;
+    margin-top: 8 * $units;
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
@@ -59,10 +59,15 @@
       display: inline-flex;
       justify-content: space-between;
       align-items: center;
-      margin-left: 2 * $units;
+      margin-left: 4 * $units;
 
       a {
-        margin: 0 1.5 * $units;
+        margin: 0 1.7 * $units;
+        height: 0.9rem;
+
+        img {
+          height: 100%;
+        }
       }
     }
   }
@@ -96,12 +101,12 @@
 @keyframes grow_circle {
   0% {
     opacity: 0;
-    transform: scale(2);
+    transform: scale(0) translateY(-100%) rotate(45deg);
   }
 
   80% {
-    opacity: 0.2;
-    transform: scale(0.9);
+    opacity: 0.6;
+    transform: scale(1.2) translateY(0) rotate(0);
   }
 
   100% {

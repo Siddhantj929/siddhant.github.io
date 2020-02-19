@@ -1,61 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Siddhant Jain | Developer & Designer</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700|Sanchez&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Siddhant Jain | Developer & Designer</title>
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700|Sanchez&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <main>
-    <!-- START: MAIN HEADER ================================== -->
-    <header>
-      <div class="container">
-        <h2 id="logo"><a href="/">Siddhant Jain</a></h2>
-        <nav>
-          <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact" class="btn-light">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- END: MAIN HEADER ================================== -->
-    <!-- START: HOME ================================== -->
-    <section id="home">
-      <img src="./img/bg-vector-circle.svg" id="bg-vector-circle">
-      <div class="container">
-        <p class="junior-heading-light">Siddhant Jain</p>
-        <h1>Creative Developer & Designer</h1>
-        <p class="body-text">I create meticulous designs with skilled hands and durable softwares with honed mind.</p>
-        <div class="cta">
-          <a href="#projects" class="btn-raised-light">See my Work</a>
-          <div class="social-handles">
-            <a href="/"><img src="./img/facebook-light.svg" alt="Facebook"></a>
-            <a href="/"><img src="./img/linkedin-light.svg" alt="LinkedIn"></a>
-            <a href="/"><img src="./img/behance-light.svg" alt="Behance"></a>
-            <a href="/"><img src="./img/github-light.svg" alt="Github"></a>
+  <body>
+    <main>
+      <!-- START: MAIN HEADER ================================== -->
+      <header>
+        <div class="container">
+          <h2 id="logo"><a href="/">Siddhant Jain</a></h2>
+          <nav>
+            <ul>
+              <li><a href="#home" class="active">Home</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact" class="btn-light">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- END: MAIN HEADER ================================== -->
+      <!-- START: HOME ================================== -->
+      <section id="home">
+        <img src="./img/bg-vector-circle.svg" id="bg-vector-circle" />
+        <div class="container">
+          <p class="junior-heading-light">Siddhant Jain</p>
+          <h1
+            class="scroll reveal--0"
+            aria-hidden="true"
+            data-scroll="out"
+            data-splitting=""
+          >
+            I marry Business with Technology
+          </h1>
+          <p class="body-text">
+            I create meticulous designs with skilled hands and durable softwares
+            with honed mind.
+          </p>
+          <div class="cta">
+            <a href="#projects" class="btn-raised-light">See my Work</a>
+            <div class="social-handles">
+              <a href="/"
+                ><img src="./img/facebook-light.svg" alt="Facebook"
+              /></a>
+              <a href="/"
+                ><img src="./img/linkedin-light.svg" alt="LinkedIn"
+              /></a>
+              <a href="/"><img src="./img/behance-light.svg" alt="Behance"/></a>
+              <a href="/"><img src="./img/github-light.svg" alt="Github"/></a>
+            </div>
           </div>
         </div>
-      </div>
-      <div id="bg-vector-waves">
-        <!-- <div id="bg-vector-waves__1" style="background-image: url(./img/bg-vector-wave.svg);"></div>
+        <div id="bg-vector-waves">
+          <!-- <div id="bg-vector-waves__1" style="background-image: url(./img/bg-vector-wave.svg);"></div>
         <div id="bg-vector-waves__2" style="background-image: url(./img/bg-vector-wave.svg);"></div> -->
-        <img src="./img/bg-vector-waves-1.svg" id="bg-vector-waves__1" alt="">
-        <img src="./img/bg-vector-waves-2.svg" id="bg-vector-waves__2" alt="">
-      </div>
-    </section>
-    <!-- END: HOME ================================== -->
-  </main>
-  <!-- JavaScript & Styling -->
-  <script src="./js/index.js"></script>
-</body>
-
+          <img
+            src="./img/bg-vector-waves-1.svg"
+            id="bg-vector-waves__1"
+            alt=""
+          />
+          <img
+            src="./img/bg-vector-waves-2.svg"
+            id="bg-vector-waves__2"
+            alt=""
+          />
+        </div>
+      </section>
+      <!-- END: HOME ================================== -->
+      <section></section>
+    </main>
+    <!-- JavaScript & Styling -->
+    <script src="https://unpkg.com/splitting/dist/splitting.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
 </html>

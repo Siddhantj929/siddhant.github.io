@@ -1,8 +1,13 @@
-html,
-body {
+html, body {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: $default-text-size;
   line-height: $line-height;
+}
+
+@include styles-above-size('lg') {
+  html, body {
+    font-size: 1.3 * $default-text-size;
+  }
 }
 
 h1,
@@ -43,11 +48,16 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 1rem;
+}
+
 %small-title-heading {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: $primary;
+  font-size: 1.1rem;
 }
 
 .junior-heading {
@@ -60,6 +70,6 @@ a {
 }
 
 .body-text {
-  font-size: 2.6 * $units;
+  font-size: 1.3rem;
   line-height: 1.5;
 }
