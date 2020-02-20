@@ -1,0 +1,25 @@
+.animation {
+  &__ghost-text,
+  &__ghost-text[data-scroll="out"] {
+    .char {
+      filter: blur(20px);
+      transform: scale(2);
+      transition: 2s;
+    }
+  }
+
+  &__ghost-text[data-scroll="in"] {
+    .char {
+      filter: blur(0);
+      transform: scale(0);
+    }
+  }
+
+  &__ghost-text {
+    @for $i from 1 through 50 {
+      .char:nth-child(#{$i}) {
+        transition-delay: 0.1s;
+      }
+    }
+  }
+}

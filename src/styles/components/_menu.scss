@@ -17,8 +17,12 @@ header {
     }
 
     nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       ul {
-        display: flex;
+        display: none;
         justify-content: space-evenly;
         align-items: center;
 
@@ -34,6 +38,108 @@ header {
             &:active,
             &.active {
               color: rgba(white, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium windows
+@include styles-above-size("sm") {
+  header {
+    padding: 4 * $units 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    z-index: 999;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      nav {
+        .menu-trigger {
+          display: none;
+        }
+
+        ul {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+
+          li {
+            margin: 0 2.5 * $units;
+
+            a {
+              color: rgba(white, 0.8);
+              transition: all 180ms linear;
+              font-weight: bold;
+
+              &:hover,
+              &:active,
+              &.active {
+                color: rgba(white, 1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Large windows
+@include styles-above-size("lg") {
+  header {
+    padding: 4 * $units 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    z-index: 999;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      nav {
+        .menu-trigger {
+          display: none;
+        }
+
+        ul {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+
+          li {
+            margin: 0 2.5 * $units;
+
+            a {
+              color: rgba(white, 0.8);
+              transition: all 180ms linear;
+              font-weight: bold;
+
+              &:hover,
+              &:active,
+              &.active {
+                color: rgba(white, 1);
+              }
             }
           }
         }

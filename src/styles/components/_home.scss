@@ -1,3 +1,4 @@
+// Mobile screens
 #home {
   position: relative;
   background: linear-gradient(to right, $secondary, $primary);
@@ -12,6 +13,8 @@
       top: 0;
       right: 0;
       animation: grow_circle 1s ease-in forwards;
+      width: 60%;
+      height: auto;
     }
 
     &-waves {
@@ -39,31 +42,38 @@
   }
 
   h1 {
-    font-size: 3.7rem;
-    margin: 2 * $units 0 4 * $units 0;
+    font-size: 2.2rem;
+    margin: 1.5 * $units 0 2.5 * $units 0;
+    width: 100%;
+    line-height: 1.4;
   }
 
   p.body-text {
     color: rgba($color: white, $alpha: 0.9);
-    margin: 2 * $units 0;
-    width: 60%;
+    margin: 0 * $units 0;
+    width: 100%;
   }
 
   .cta {
-    margin-top: 8 * $units;
+    margin-top: 5.5 * $units;
     display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
     .social-handles {
       display: inline-flex;
       justify-content: space-between;
       align-items: center;
-      margin-left: 4 * $units;
+      margin-top: 4 * $units;
 
       a {
         margin: 0 1.7 * $units;
         height: 0.9rem;
+
+        &:first-child {
+          margin-left: $units;
+        }
 
         img {
           height: 100%;
@@ -112,5 +122,176 @@
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+// ====================================================
+// MEDIA QUERIES - MEDIUM WINDOW
+// ====================================================
+
+// Medium Window
+@include styles-above-size("sm") {
+  #home {
+    position: relative;
+    background: linear-gradient(to right, $secondary, $primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    #bg-vector {
+      &-circle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        animation: grow_circle 1s ease-in forwards;
+      }
+
+      &-waves {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &__1,
+        &__2 {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform-origin: right bottom;
+        }
+
+        &__1 {
+          animation: move_wave_1 10s ease-in-out infinite;
+        }
+
+        &__2 {
+          animation: move_wave_1 10s 2s ease-in-out infinite alternate;
+          opacity: 0;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 3.7rem;
+      margin: 2 * $units 0 4 * $units 0;
+      width: 80%;
+      line-height: 1.3;
+    }
+
+    p.body-text {
+      color: rgba($color: white, $alpha: 0.9);
+      margin: 2 * $units 0;
+      width: 50%;
+    }
+
+    .cta {
+      margin-top: 8 * $units;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      .social-handles {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0;
+        margin-left: 4 * $units;
+
+        a {
+          margin: 0 1.7 * $units;
+          height: 0.9rem;
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ====================================================
+// MEDIA QUERIES - LARGE WINDOW
+// ====================================================
+
+// Large windows
+@include styles-above-size("lg") {
+  #home {
+    position: relative;
+    background: linear-gradient(to right, $secondary, $primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    #bg-vector {
+      &-circle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        animation: grow_circle 1s ease-in forwards;
+      }
+
+      &-waves {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &__1,
+        &__2 {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transform-origin: right bottom;
+        }
+
+        &__1 {
+          animation: move_wave_1 10s ease-in-out infinite;
+        }
+
+        &__2 {
+          animation: move_wave_1 10s 2s ease-in-out infinite alternate;
+          opacity: 0;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 3.7rem;
+      margin: 2 * $units 0 4 * $units 0;
+      width: 80%;
+      line-height: 1.3;
+    }
+
+    p.body-text {
+      color: rgba($color: white, $alpha: 0.9);
+      margin: 2 * $units 0;
+      width: 50%;
+    }
+
+    .cta {
+      margin-top: 8 * $units;
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .social-handles {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 4 * $units;
+
+        a {
+          margin: 0 1.7 * $units;
+          height: 0.9rem;
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
   }
 }

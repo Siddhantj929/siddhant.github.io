@@ -10,7 +10,7 @@
   padding: 1.5 * $units 2.5 * $units;
   color: white;
   background: linear-gradient(to right, $secondary, $primary);
-  box-shadow: 0 4px 24px rgba(black, 0.15);
+  box-shadow: 0 4px 24px rgba(rgb(8, 6, 6), 0.15);
   font-weight: bold;
   display: inline-block;
 }
@@ -42,7 +42,29 @@
       color: black;
       background: white;
       box-shadow: 0 12px 45px rgba(black, 0.28);
-      padding: 2.9 * $units 4.7 * $units;
+      padding: 2.4 * $units 3.8 * $units;
+    }
+  }
+}
+
+// Medium Windows
+@include styles-above-size("sm") {
+  .btn {
+    &-raised {
+      &-light {
+        padding: 3.3 * $units 4.5 * $units;
+      }
+    }
+  }
+}
+
+// Large windows
+@include styles-above-size("lg") {
+  .btn {
+    &-raised {
+      &-light {
+        padding: 3.3 * $units 4.5 * $units;
+      }
     }
   }
 }
