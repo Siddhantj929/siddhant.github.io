@@ -4,22 +4,59 @@
     .char {
       filter: blur(20px);
       transform: scale(2);
-      transition: 2s;
+      // color: $secondary;
+      display: inline-block;
+      opacity: 0;
+      transition: all 0.7s cubic-bezier(0.47, 0.51, 0.36, 0.99);
     }
   }
 
   &__ghost-text[data-scroll="in"] {
     .char {
       filter: blur(0);
-      transform: scale(0);
+      opacity: 1;
+      transform: scale(1);
+      // color: white;
     }
   }
 
-  &__ghost-text {
-    @for $i from 1 through 50 {
-      .char:nth-child(#{$i}) {
-        transition-delay: 0.1s;
-      }
-    }
+  &__fadeIn,
+  &__fadeIn[data-scroll="out"] {
+    opacity: 0;
+    transition: all 2s linear;
+  }
+
+  &__fadeIn[data-scroll="in"] {
+    opacity: 1;
+  }
+
+  &__fadeInUp,
+  &__fadeInUp[data-scroll="out"] {
+    opacity: 0;
+    transform: translateY(20%);
+    filter: blur(5px);
+    transition: all 1s ease-in-out;
+    // transition: all 1.5s cubic-bezier(0.47, 0.51, 0.36, 0.99);
+  }
+
+  &__fadeInUp[data-scroll="in"] {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  &__fadeInRight,
+  &__fadeInRight[data-scroll="out"] {
+    opacity: 0;
+    transform: translateX(-20%);
+    // filter: blur(5px);
+    transition: all 0.5s ease-in-out;
+    // transition: all 1.5s cubic-bezier(0.47, 0.51, 0.36, 0.99);
+  }
+
+  &__fadeInRight[data-scroll="in"] {
+    transform: translateX(0);
+    // filter: blur(0);
+    opacity: 1;
   }
 }

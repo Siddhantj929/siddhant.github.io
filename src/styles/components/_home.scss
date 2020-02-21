@@ -10,10 +10,10 @@
   #bg-vector {
     &-circle {
       position: absolute;
-      top: 0;
-      right: 0;
-      animation: grow_circle 1s ease-in forwards;
-      width: 60%;
+      top: -10%;
+      right: -20%;
+      // animation: grow_circle 1s ease-in forwards;
+      width: 70%;
       height: auto;
     }
 
@@ -145,7 +145,7 @@
         top: 0;
         right: 0;
         width: auto;
-        animation: grow_circle 1s ease-in forwards;
+        // animation: grow_circle 1s ease-in forwards;
       }
 
       &-waves {
@@ -231,7 +231,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        animation: grow_circle 1s ease-in forwards;
+        // animation: grow_circle 1s ease-in forwards;
       }
 
       &-waves {

@@ -199,7 +199,13 @@ require("../styles/main.scss");
 // Importing components
 // import "./components/glitchAnimation";
 var splittedElements = window.Splitting();
-ScrollOut();
+ScrollOut(); // Adding transition-delay to chars in ghost-text
+
+document.querySelectorAll(".animation__ghost-text").forEach(function (el) {
+  el.querySelectorAll(".char").forEach(function (c, i) {
+    c.style.transitionDelay = i * 40 + "ms";
+  });
+});
 },{"../styles/main.scss":"styles/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -228,7 +234,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44243" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46209" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

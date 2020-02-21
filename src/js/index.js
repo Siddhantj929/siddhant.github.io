@@ -8,3 +8,10 @@ import "../styles/main.scss";
 
 const splittedElements = window.Splitting();
 ScrollOut();
+
+// Adding transition-delay to chars in ghost-text
+document.querySelectorAll(".animation__ghost-text").forEach(el => {
+  el.querySelectorAll(".char").forEach((c, i) => {
+    c.style.transitionDelay = i * 40 + "ms";
+  });
+});
